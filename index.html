@@ -4,16 +4,186 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+      }
+
+      header {
+        background: #f4f4f4;
+        color: #333;
+        padding: 1rem 0;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .work-in-progress {
+        background: #ffefcc;
+        color: #665600;
+        text-align: center;
+        padding: 10px 0;
+        font-weight: bold;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .profile-picture {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 0 auto 10px;
+        display: block;
+        border: 3px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 20px auto;
+      }
+
+      .table-of-contents {
+        margin: 20px 0;
+        padding: 15px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .table-of-contents ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .table-of-contents ul li {
+        margin: 5px 0;
+      }
+
+      /* Styled anchor links */
+      .table-of-contents a {
+        color: blue; /* Set link color to blue */
+        text-decoration: none;
+      }
+
+      .table-of-contents a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        color: #444;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      ul.projects {
+        list-style: disc;
+        padding-left: 20px;
+      }
+
+      ul.projects li {
+        padding: 5px 0;
+      }
+
+      hr {
+        border: 0;
+        border-top: 1px solid #ddd;
+        margin: 20px 0;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem 0;
+        background: #f4f4f4;
+        color: #333;
+        border-top: 1px solid #ddd;
+      }
+
+      /* Global anchor link styling */
+      a {
+        color: blue; /* Set global link color to blue */
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      #back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #444;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #back-to-top:hover {
+        background: #333;
+      }
+
+      #skills {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      #skills h2 {
+        color: #444;
+      }
+
+      .skills-category {
+        margin-bottom: 15px;
+      }
+
+      .skills-category h3 {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 5px;
+      }
+
+      .skills-category p {
+        font-size: 1rem;
+        color: #444;
+        margin: 0;
+      }
+
+      .skills-category p span {
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
+    <div class="work-in-progress">This webpage is a work in progress</div>
+
     <header>
       <img
         src="./images/profile-pic-2.png"
         alt="Profile Picture"
         class="profile-picture"
       />
-      <h1>Janitha Ratnayake</h1>
+      <h1>Janitha Devin Ratnayake</h1>
       <p>Software Engineer at WOS | Mentor</p>
     </header>
 
@@ -46,79 +216,131 @@
         <h2>Experience</h2>
         <ul>
           <li>
-            <strong>Software Engineer</strong> at WealthOS (May 2024 - Present)
+            <strong>Software Engineer</strong> at WealthOS Asia Pacific (Pvt)
+            Ltd. (Jun 2024 - Present)
           </li>
           <li>
-            <strong>Software Engineer - Intern</strong> at Xeptagon (Nov 2022 -
-            Apr 2023)
+            <strong>Software Engineer Intern</strong> at Xeptagon (Pvt) Ltd.
+            (Nov 2022 - Apr 2023)
           </li>
         </ul>
       </section>
 
       <section id="projects">
         <h2>Projects</h2>
-        <ul>
+
+        <strong>Project Management App</strong>
+        <ul class="projects">
           <li>
-            <a href="#">EMvidence</a> - EMvidence is a software tool designed to
-            extract forensic insights from electromagnetic (EM) signals emitted
-            by IoT devices. It enables users to capture the EM signals emitted
-            by the device being tested using Software-defined Radio (SDR)
-            hardware named HackRF One. Users can preprocess and analyze these
-            signals using EMvidence's various modules to gain an understanding
-            of the tested IoT devices. Additionally, users have the flexibility
-            to develop their own third-party modules tailored to their specific
-            needs, promoting the open-source development of preprocessing and
-            analysis plugins that enhance the overall capability of the software
-            tool. EMvidence provides an alternative forensic solution for IoT
-            devices that was found in an investigation instead of classical and
-            invasive digital forensic techniques.
+            Description: A tool to manage tasks and team collaboration
+            efficiently.
+          </li>
+          <li>Features include real-time updates and analytics dashboards.</li>
+          <li>
+            Contributors:
+            <a href="https://www.linkedin.com/in/contributor1">Contributor 1</a
+            >,
+            <a href="https://www.linkedin.com/in/contributor2">Contributor 2</a>
+          </li>
+        </ul>
+        <hr />
+
+        <strong>EMvidence</strong>
+        <ul class="projects">
+          <li>
+            EMvidence is a software tool designed to extract forensic insights
+            from electromagnetic (EM) signals emitted by IoT devices. It enables
+            users to capture the EM signals emitted by the device being tested
+            using Software-defined Radio (SDR) hardware named HackRF One. Users
+            can preprocess and analyze these signals using EMvidence's various
+            modules to gain an understanding of the tested IoT devices.
+            Additionally, users have the flexibility to develop their own
+            third-party modules tailored to their specific needs, promoting the
+            open-source development of preprocessing and analysis plugins that
+            enhance the overall capability of the software tool. EMvidence
+            provides an alternative forensic solution for IoT devices that was
+            found in an investigation instead of classical and invasive digital
+            forensic techniques.
           </li>
           <li>
-            <a href="#">ARTTIC</a> - ARTTIC is a community platform that
-            develops and promotes NFT (Non-Fungible Token) creators, allowing
-            them to market their work. It provides a global network between NFT
-            creators and followers. Creators can verify their status by
-            connecting their crypto wallet to the system, which is connected to
-            OpenSea. The platform provides information on newly generated NFTs,
-            their background stories, upcoming NFTs, and previous works of the
-            creator. Creators can publish all the latest information on their
-            profiles and receive feedback from followers. The platform is for
-            existing NFT creators and followers, as well as anyone interested in
-            joining the industry in the future.
+            Contributors:
+            <a href="https://www.linkedin.com/in/contributor3">Contributor 3</a>
+          </li>
+        </ul>
+        <hr />
+
+        <strong>ARTTIC</strong>
+        <ul class="projects">
+          <li>
+            ARTTIC is a community platform that develops and promotes NFT
+            (Non-Fungible Token) creators, allowing them to market their work.
+            It provides a global network between NFT creators and followers.
+            Creators can verify their status by connecting their crypto wallet
+            to the system, which is connected to OpenSea. The platform provides
+            information on newly generated NFTs, their background stories,
+            upcoming NFTs, and previous works of the creator. Creators can
+            publish all the latest information on their profiles and receive
+            feedback from followers. The platform is for existing NFT creators
+            and followers, as well as anyone interested in joining the industry
+            in the future.
           </li>
           <li>
-            <a href="#">ALec</a> - ALec is a mobile and web application that
-            addresses the challenges of low student engagement and interaction
-            in the classroom. It allows lecturers to give small quizzes during
-            lectures, which students can answer via their smartphones, giving
-            the lecturer a real-time understanding of students' knowledge and
-            understanding of the lecture. Students can also ask questions
-            anonymously through the app, increasing participation and
-            interaction in class. The app provides a platform for
-            self-evaluation through a leaderboard and review system, helping
-            students to pay closer attention to course content. ALec strengthens
-            the interaction between lecturers and students, increasing
-            efficiency and popularity for both parties, and ultimately improving
-            the overall learning experience.
+            Contributors:
+            <a href="https://www.linkedin.com/in/contributor4">Contributor 4</a
+            >,
+            <a href="https://www.linkedin.com/in/contributor5">Contributor 5</a>
+          </li>
+        </ul>
+
+        <strong>ALec</strong>
+        <ul class="projects">
+          <li>
+            ALec is a mobile and web application that addresses the challenges
+            of low student engagement and interaction in the classroom. It
+            allows lecturers to give small quizzes during lectures, which
+            students can answer via their smartphones, giving the lecturer a
+            real-time understanding of students' knowledge and understanding of
+            the lecture. Students can also ask questions anonymously through the
+            app, increasing participation and interaction in class. The app
+            provides a platform for self-evaluation through a leaderboard and
+            review system, helping students to pay closer attention to course
+            content. ALec strengthens the interaction between lecturers and
+            students, increasing efficiency and popularity for both parties, and
+            ultimately improving the overall learning experience.
+          </li>
+          <li>
+            Contributors:
+            <a href="https://www.linkedin.com/in/contributor4">Contributor 4</a
+            >,
+            <a href="https://www.linkedin.com/in/contributor5">Contributor 5</a>
           </li>
         </ul>
       </section>
 
       <section id="skills">
         <h2>Skills</h2>
-        <ul>
-          <li>JavaScript | Python | C | C++ | Java</li>
-          <li>React | Node.js (Express) | Laravel</li>
-          <li>MySQL | PostgreSQL</li>
-          <li>Git, GitHub</li>
-          <li>Git | Linux | Docker | Jira | Trello | LaTeX</li>
-        </ul>
+        <div class="skills-category">
+          <h3>Programming Languages</h3>
+          <p>TypeScript | Python | C | C++ | Java</p>
+        </div>
+        <div class="skills-category">
+          <h3>Web Development</h3>
+          <p>React | Node.js (Express) | Laravel</p>
+        </div>
+        <div class="skills-category">
+          <h3>Databases</h3>
+          <p>MongoDB | Redis | MySQL | PostgreSQL</p>
+        </div>
+        <div class="skills-category">
+          <h3>Other Technologies</h3>
+          <p>Git | Linux | Docker</p>
+        </div>
       </section>
 
       <section id="volunteering">
         <h2>Volunteering</h2>
         <ul>
-          <li><strong>University Ambassador </strong> G17 Global</li>
+          <li><strong>University Ambassador</strong> at G17 Global</li>
         </ul>
       </section>
     </div>
@@ -126,7 +348,7 @@
     <a href="#" id="back-to-top">&#8593; Back to Top</a>
 
     <footer>
-      <p>&copy; 2025 Janitha Ratnayake. All Rights Reserved.</p>
+      <p>&copy; 2025 Janitha Devin Ratnayake. All Rights Reserved.</p>
     </footer>
   </body>
 </html>

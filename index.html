@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Janitha Devin Ratnayake</title>
+    <link rel="icon" type="image/png" href="./images/profile-pic-2.png" />
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -172,10 +173,69 @@
       .skills-category p span {
         font-weight: bold;
       }
+
+      .project-description {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-description ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .project-description ul li {
+        margin: 5px 0;
+        padding-left: 10px;
+        position: relative;
+      }
+
+      .project-description ul li:before {
+        content: "•";
+        color: #333;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .project-timeline {
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .skill-item {
+        display: flex;
+        align-items: center;
+        gap: 8px; /* Space between image and name */
+      }
+
+      .skill-item img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .skill-item span {
+        font-size: 16px;
+        font-weight: 500;
+      }
     </style>
   </head>
   <body>
-    <div class="work-in-progress">This webpage is a work in progress</div>
+    <!-- <div class="work-in-progress">This webpage is a work in progress</div> -->
 
     <header>
       <img
@@ -184,7 +244,7 @@
         class="profile-picture"
       />
       <h1>Janitha Devin Ratnayake</h1>
-      <p>Software Engineer at WOS | Mentor</p>
+      <p>Software Engineer | Mentor</p>
     </header>
 
     <div class="container">
@@ -193,155 +253,316 @@
         <ul>
           <li><a href="#about">About Me</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#volunteering">Volunteering</a></li>
+          <li><a href="#projects">Projects</a></li>
         </ul>
       </nav>
 
       <section id="about">
         <h2>About Me</h2>
         <p>
-          Hello! I'm Janitha, As a software engineer, I am committed to
-          delivering solutions that meet business needs with precision and
-          reliability. By collaborating with cross-functional teams, I ensure
-          that the user’s needs are met effectively. My philosophy of
-          prioritizing quality over quantity drives my focus on creating
-          scalable systems with a low bug rate, offering exceptional value and
-          long-term maintainability.
+          <b>Hello! I'm Janitha Devin Ratnayake</b>. As a software engineer, I
+          am committed to delivering solutions that meet business needs with
+          precision and reliability. By collaborating with cross-functional
+          teams, I ensure that the user’s needs are met effectively. My
+          philosophy of prioritizing quality over quantity drives my focus on
+          creating scalable systems with a low bug rate, offering exceptional
+          value and long-term maintainability.
         </p>
       </section>
 
       <section id="experience">
         <h2>Experience</h2>
-        <ul>
-          <li>
-            <strong>Software Engineer</strong> at WealthOS Asia Pacific (Pvt)
-            Ltd. (Jun 2024 - Present)
-          </li>
-          <li>
-            <strong>Software Engineer Intern</strong> at Xeptagon (Pvt) Ltd.
-            (Nov 2022 - Apr 2023)
-          </li>
-        </ul>
+        <strong>Software Engineer - WealthOS Asia Pacific (Pvt) Ltd.</strong>
+        <p class="project-timeline">May 2024 - Present</p>
+        <div class="project-description">
+          <ul>
+            <li>
+              Gain hands-on experience in wealth management, developing business
+              and technical features to enhance the scalability of SaaS clients.
+            </li>
+            <li>
+              Improve system reliability by efficiently resolving highpriority
+              issues, enhancing overall client satisfaction.
+            </li>
+            <li>
+              Strengthen expertise in coding best practices and test automation
+              to ensure high-quality deliverables.
+            </li>
+            <li>
+              <b>Technologies:</b> Node.js (Express), TypeScript, React,
+              MongoDB, Redis, Docker, Terraform, AWS (Lambda, DynamoDB,
+              DocumentDB, ElastiCache, IAM, S3, API Gateway, CloudWatch,
+              CloudFormation, SAM), SonarCloud, Snyk, Swagger/OpenAPI 3.0,
+              Mongoose, Mocha, Chai, Bitbucket CI/CD
+            </li>
+          </ul>
+        </div>
+
+        <hr />
+
+        <strong>Software Engineer Intern - Xeptagon (Pvt) Ltd.</strong>
+        <p class="project-timeline">Nov 2022 - Apr 2023</p>
+        <div class="project-description">
+          <ul>
+            <li>
+              Designed and implemented an ETL process system to streamline data
+              workflows.
+            </li>
+            <li>
+              <b>Technologies:</b> Python, Azure (Synapse Analytics, Blob
+              Storage), Selenium
+            </li>
+          </ul>
+        </div>
+
+        <hr />
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+
+        <!-- Programming Languages -->
+        <div class="skills-category">
+          <h3>Programming Languages</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <img src="./images/typescript.png" alt="TypeScript" />
+              <span>TypeScript</span>
+            </div>
+            |
+            <div class="skill-item">
+              <img src="./images/python.png" alt="Python" />
+              <span>Python</span>
+            </div>
+            |
+            <div class="skill-item">
+              <img src="./images/c.png" alt="C" />
+              <span>C</span>
+            </div>
+            |
+            <div class="skill-item">
+              <img src="./images/c++.png" alt="C" />
+              <span>C++</span>
+            </div>
+            |
+            <div class="skill-item">
+              <img src="./images/java.png" alt="Java" />
+              <span>Java</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="skills-category">
+          <h3>Web Development</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <img src="./images/react.png" alt="React" />
+              <span>React</span>
+            </div>
+            |
+            <div class="skill-item">
+              <img src="./images/nodejs.png" alt="Node.js" />
+              <span>Node.js (Express)</span>
+            </div>
+            |
+            <div class="skill-item">
+              <img src="./images/laravel.png" alt="Laravel" />
+              <span>Laravel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skills-category">
+          <h3>Databases</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <img src="./images/mongodb.svg" alt="MongoDB" />
+              <span>MongoDB</span>
+            </div>
+            |
+            <div class="skill-item">
+              <img src="./images/redis.png" alt="Redis" />
+              <span>Redis</span>
+            </div>
+            |
+            <div class="skill-item">
+              <img src="./images/mysql.png" alt="MySQL" />
+              <span>MySQL</span>
+            </div>
+            |
+            <div class="skill-item">
+              <img src="./images/postgresql.png" alt="PostgreSQL" />
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Technologies -->
+        <div class="skills-category">
+          <h3>Other Technologies</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <img src="./images/git.png" alt="Git" />
+              <span>Git</span>
+            </div>
+            |
+            <div class="skill-item">
+              <img src="./images/linux.png" alt="Linux" />
+              <span>Linux</span>
+            </div>
+            |
+            <div class="skill-item">
+              <img src="./images/docker.png" alt="Docker" />
+              <span>Docker</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="projects">
         <h2>Projects</h2>
 
-        <strong>Project Management App</strong>
-        <ul class="projects">
-          <li>
-            Description: A tool to manage tasks and team collaboration
-            efficiently.
-          </li>
-          <li>Features include real-time updates and analytics dashboards.</li>
-          <li>
-            Contributors:
-            <a href="https://www.linkedin.com/in/contributor1">Contributor 1</a
-            >,
-            <a href="https://www.linkedin.com/in/contributor2">Contributor 2</a>
-          </li>
-        </ul>
-        <hr />
-
         <strong>EMvidence</strong>
+        <p class="project-timeline">Jun 2023 - May 2024</p>
+        <div class="project-description">
+          <ul>
+            <li>
+              EMvidence is a software tool designed to extract forensic insights
+              from electromagnetic (EM) signals emitted by IoT devices.
+            </li>
+            <li>
+              Enables users to capture EM signals from the device being tested
+              using Software-defined Radio (SDR) hardware, specifically the
+              HackRF One.
+            </li>
+            <li>
+              Users can preprocess and analyze the captured EM signals using
+              various modules within EMvidence to gain insights into the tested
+              IoT devices.
+            </li>
+            <li>
+              Allows users to develop third-party modules tailored to their
+              specific needs, fostering open-source development of preprocessing
+              and analysis plugins.
+            </li>
+            <li>
+              Provides an alternative forensic solution for IoT devices found in
+              investigations, as opposed to traditional and invasive digital
+              forensic techniques.
+            </li>
+          </ul>
+        </div>
         <ul class="projects">
-          <li>
-            EMvidence is a software tool designed to extract forensic insights
-            from electromagnetic (EM) signals emitted by IoT devices. It enables
-            users to capture the EM signals emitted by the device being tested
-            using Software-defined Radio (SDR) hardware named HackRF One. Users
-            can preprocess and analyze these signals using EMvidence's various
-            modules to gain an understanding of the tested IoT devices.
-            Additionally, users have the flexibility to develop their own
-            third-party modules tailored to their specific needs, promoting the
-            open-source development of preprocessing and analysis plugins that
-            enhance the overall capability of the software tool. EMvidence
-            provides an alternative forensic solution for IoT devices that was
-            found in an investigation instead of classical and invasive digital
-            forensic techniques.
-          </li>
-          <li>
-            Contributors:
-            <a href="https://www.linkedin.com/in/contributor3">Contributor 3</a>
-          </li>
+          Contributors:
+          <a href="https://www.linkedin.com/in/senal-punsara-6740941a5/"
+            >Senal Punsara</a
+          >,<a href="https://www.linkedin.com/in/dinil-ratnayake/">
+            Dinil Ratnayake</a
+          >,<a href="https://www.linkedin.com/in/asanka-p-sayakkara-06300814/">
+            Asanka Sayakkara</a
+          >,
+          <a href="https://www.linkedin.com/in/akila-wickramasekara-a976a918/"
+            >Akila Wickramasekara</a
+          >
         </ul>
         <hr />
 
         <strong>ARTTIC</strong>
+        <p class="project-timeline">Apr 2022 - Oct 2022</p>
+        <div class="project-description">
+          <ul>
+            <li>
+              ARTTIC is a community platform empowering Non-Fungible Token (NFT)
+              creators to globally market their work by connecting them with a
+              network of NFT followers.
+            </li>
+            <li>
+              The platform provides information on newly minted NFTs, their
+              background stories, upcoming NFTs, and previous works of the
+              creator.
+            </li>
+            <li>
+              Creators can publish all the latest information on their profiles
+              and receive feedback from followers.
+            </li>
+            <li>
+              This platform is designed for existing NFT creators and followers,
+              as well as anyone interested in joining the industry in the
+              future.
+            </li>
+          </ul>
+        </div>
         <ul class="projects">
-          <li>
-            ARTTIC is a community platform that develops and promotes NFT
-            (Non-Fungible Token) creators, allowing them to market their work.
-            It provides a global network between NFT creators and followers.
-            Creators can verify their status by connecting their crypto wallet
-            to the system, which is connected to OpenSea. The platform provides
-            information on newly generated NFTs, their background stories,
-            upcoming NFTs, and previous works of the creator. Creators can
-            publish all the latest information on their profiles and receive
-            feedback from followers. The platform is for existing NFT creators
-            and followers, as well as anyone interested in joining the industry
-            in the future.
-          </li>
-          <li>
-            Contributors:
-            <a href="https://www.linkedin.com/in/contributor4">Contributor 4</a
-            >,
-            <a href="https://www.linkedin.com/in/contributor5">Contributor 5</a>
-          </li>
+          Contributors:
+          <a href="https://www.linkedin.com/in/charith-anjana/"
+            >Charith Anjana</a
+          >,
+          <a href="https://www.linkedin.com/in/mahesh-lakshan/">
+            Mahesh Lakshan </a
+          >,
+          <a href="https://www.linkedin.com/in/maleesha-gunarathna/">
+            Maleesha Gunarathna </a
+          >,
+          <a
+            href="https://www.linkedin.com/in/lavinka-gayeshi-weerasekara-0240b6170/"
+          >
+            Lavinka Weerasekara </a
+          >,
+          <a href="https://www.linkedin.com/in/thilina-halloluwa/">
+            Thilina Halloluwa
+          </a>
         </ul>
+        <hr />
 
         <strong>ALec</strong>
+        <p class="project-timeline">Mar 2021 - Mar 2022</p>
+        <div class="project-description">
+          <ul>
+            <li>
+              ALec is a mobile and web application that addresses the challenges
+              of low student engagement and interaction in the classroom.
+            </li>
+            <li>
+              It allows lecturers to give small quizzes during lectures, which
+              students can answer via their smartphones, giving the lecturer a
+              real-time understanding of students' knowledge and understanding
+              of the lecture.
+            </li>
+            <li>
+              Students can also ask questions anonymously through the app,
+              increasing participation and interaction in class.
+            </li>
+            <li>
+              The app provides a platform for self-evaluation through a
+              leaderboard and review system, helping students to pay closer
+              attention to course content.
+            </li>
+            <li>
+              ALec strengthens the interaction between lecturers and students,
+              increasing efficiency and popularity for both parties, and
+              ultimately improving the overall learning experience.
+            </li>
+          </ul>
+        </div>
         <ul class="projects">
-          <li>
-            ALec is a mobile and web application that addresses the challenges
-            of low student engagement and interaction in the classroom. It
-            allows lecturers to give small quizzes during lectures, which
-            students can answer via their smartphones, giving the lecturer a
-            real-time understanding of students' knowledge and understanding of
-            the lecture. Students can also ask questions anonymously through the
-            app, increasing participation and interaction in class. The app
-            provides a platform for self-evaluation through a leaderboard and
-            review system, helping students to pay closer attention to course
-            content. ALec strengthens the interaction between lecturers and
-            students, increasing efficiency and popularity for both parties, and
-            ultimately improving the overall learning experience.
-          </li>
-          <li>
-            Contributors:
-            <a href="https://www.linkedin.com/in/contributor4">Contributor 4</a
-            >,
-            <a href="https://www.linkedin.com/in/contributor5">Contributor 5</a>
-          </li>
+          Contributors:
+          <a href="https://www.linkedin.com/in/charith-anjana/"
+            >Charith Anjana</a
+          >,
+          <a href="https://www.linkedin.com/in/pansilu-gunaratna/">
+            Pansilu Gunaratna </a
+          >,
+          <a href="https://www.linkedin.com/in/sumudu-wathsala-511813253/">
+            Sumudu Wathsala </a
+          >,
+          <a href="https://www.linkedin.com/in/dinunifernando/">
+            Dinuni Fernando
+          </a>
         </ul>
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-category">
-          <h3>Programming Languages</h3>
-          <p>TypeScript | Python | C | C++ | Java</p>
-        </div>
-        <div class="skills-category">
-          <h3>Web Development</h3>
-          <p>React | Node.js (Express) | Laravel</p>
-        </div>
-        <div class="skills-category">
-          <h3>Databases</h3>
-          <p>MongoDB | Redis | MySQL | PostgreSQL</p>
-        </div>
-        <div class="skills-category">
-          <h3>Other Technologies</h3>
-          <p>Git | Linux | Docker</p>
-        </div>
-      </section>
-
-      <section id="volunteering">
-        <h2>Volunteering</h2>
-        <ul>
-          <li><strong>University Ambassador</strong> at G17 Global</li>
-        </ul>
+        <hr />
       </section>
     </div>
 

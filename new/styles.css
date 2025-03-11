@@ -51,12 +51,19 @@ body {
 .container-fluid .lower .details .social-media-account-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   margin-top: 0.5rem;
+  width: 100%;
+  flex-wrap: nowrap;
 }
 
 .container-fluid .lower .details .social-media-account-list a {
   text-decoration: none;
+  position: relative; /* Needed for absolute positioning of label */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container-fluid .lower .details .social-media-account-list img {
@@ -70,21 +77,41 @@ body {
   transform: scale(1.1);
 }
 
+/* Hover label for social media icons */
+.container-fluid .lower .details .social-media-account-list a span {
+  display: none;
+  position: absolute;
+  bottom: -1.8rem; /* Adjust distance from icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.container-fluid .lower .details .social-media-account-list a:hover span {
+  display: block; /* Show label on hover */
+}
+
 .container-fluid .lower .details .skills-list {
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: center;
 }
 
 .container-fluid .lower .details .skills-list h5 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-weight: 500;
+  text-align: left;
 }
 
 .container-fluid .lower .details .skill-icons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four columns per row */
-  /* gap: 1rem; */
+  grid-template-columns: repeat(5, 1fr); /* Four icons per row */
   justify-items: center;
   margin-bottom: 1rem;
 }
@@ -93,12 +120,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 5rem;
+  position: relative; /* Needed for label positioning */
+  width: 3rem;
 }
 
 .container-fluid .lower .details .skill-item img {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   object-fit: contain;
   transition: transform 0.3s ease-in-out;
 }
@@ -108,6 +136,17 @@ body {
 }
 
 .container-fluid .lower .details .skill-item span {
+  display: none; /* Hide label by default */
+  position: absolute;
+  bottom: -1.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
   font-size: 0.75rem;
-  margin-top: 0.25rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.container-fluid .lower .details .skill-item:hover span {
+  display: block; /* Show label on hover */
 }

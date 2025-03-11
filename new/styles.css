@@ -19,7 +19,7 @@ body {
 
 .container-fluid .lower {
   display: flex;
-  height: 90vh;
+  height: 85vh;
   padding: 1rem;
   padding-top: 2rem;
 }
@@ -149,4 +149,12 @@ body {
 
 .container-fluid .lower .details .skill-item:hover span {
   display: block; /* Show label on hover */
+}
+
+.footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  height: 5vh;
 }

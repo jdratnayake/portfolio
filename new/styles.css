@@ -1,0 +1,71 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.container-fluid .upper {
+  height: 10vh;
+}
+
+.container-fluid .upper nav {
+  padding: 1rem;
+}
+
+.container-fluid .lower {
+  display: flex;
+  height: 90vh;
+  padding: 1rem;
+  padding-top: 2rem;
+}
+
+.container-fluid .lower .profile-picture img {
+  border-radius: 50%;
+  width: 8.5rem;
+  height: 8.5rem;
+  object-fit: cover;
+}
+
+.container-fluid .lower .details {
+  margin-top: 0.5rem;
+}
+
+.container-fluid .lower .details .basic {
+  display: flexbox;
+  text-align: center;
+}
+
+.container-fluid .lower .details .basic .name {
+  font-size: 1rem;
+}
+
+.container-fluid .lower .details .basic .second {
+  font-size: 0.75rem;
+}
+
+.container-fluid .lower .details .social-media-account-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.container-fluid .lower .details .social-media-account-list a {
+  text-decoration: none;
+}
+
+.container-fluid .lower .details .social-media-account-list img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container-fluid .lower .details .social-media-account-list img:hover {
+  transform: scale(1.1);
+}

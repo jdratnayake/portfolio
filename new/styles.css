@@ -26,8 +26,8 @@ body {
 
 .container-fluid .lower .profile-picture img {
   border-radius: 50%;
-  width: 8.5rem;
-  height: 8.5rem;
+  width: 7.5rem;
+  height: 7.5rem;
   object-fit: cover;
 }
 
@@ -68,4 +68,46 @@ body {
 
 .container-fluid .lower .details .social-media-account-list img:hover {
   transform: scale(1.1);
+}
+
+.container-fluid .lower .details .skills-list {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.container-fluid .lower .details .skills-list h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.container-fluid .lower .details .skill-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns per row */
+  /* gap: 1rem; */
+  justify-items: center;
+  margin-bottom: 1rem;
+}
+
+.container-fluid .lower .details .skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 5rem;
+}
+
+.container-fluid .lower .details .skill-item img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container-fluid .lower .details .skill-item img:hover {
+  transform: scale(1.1);
+}
+
+.container-fluid .lower .details .skill-item span {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
 }

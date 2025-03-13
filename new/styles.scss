@@ -164,6 +164,39 @@ body {
             margin-bottom: 2.5rem;
           }
 
+          .project-name-box {
+            display: flex;
+            gap: 0.5rem;
+
+            .name {
+              font-size: 1.25rem;
+            }
+
+            .project-label {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              height: 1rem;
+              margin-top: auto;
+              margin-bottom: auto;
+              font-size: 0.75rem;
+              font-weight: bold;
+              padding: 0.25rem 0.5rem;
+              border-radius: 0.25rem;
+              text-transform: uppercase;
+            }
+
+            .project-label.group {
+              background-color: #007bff; /* Blue */
+              color: white;
+            }
+
+            .project-label.individual {
+              background-color: #28a745; /* Green */
+              color: white;
+            }
+          }
+
           .timeline {
             font-size: 0.9rem;
             color: #555;

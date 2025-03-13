@@ -189,7 +189,36 @@ body {
             }
           }
 
+          .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0.5rem;
+            background-color: #24292e;
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 0.3rem;
+            border: none;
+            transition: background 0.3s ease;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+
+            .github-icon {
+              width: 1rem;
+              height: 1rem;
+            }
+
+            &:hover {
+              background-color: #333;
+            }
+          }
+
           .projects {
+            a {
+              text-decoration: none;
+            }
           }
         }
       }

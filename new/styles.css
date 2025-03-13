@@ -2,53 +2,42 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  height: 100%;
 }
-
-.container-fluid {
+body .container-fluid {
   padding: 0;
 }
-
-.container-fluid .upper {
+body .container-fluid .upper {
   height: 10vh;
 }
-
-.container-fluid .upper nav {
+body .container-fluid .upper nav {
   padding: 1rem;
 }
-
-.container-fluid .lower {
+body .container-fluid .lower {
   display: flex;
   height: 85vh;
   padding: 1rem;
   padding-top: 2rem;
 }
-
-.container-fluid .lower .profile-picture img {
+body .container-fluid .lower .profile-picture img {
   border-radius: 50%;
   width: 7.5rem;
   height: 7.5rem;
   object-fit: cover;
 }
-
-.container-fluid .lower .details {
+body .container-fluid .lower .details {
   margin-top: 0.5rem;
 }
-
-.container-fluid .lower .details .basic {
+body .container-fluid .lower .details .basic {
   display: flexbox;
   text-align: center;
 }
-
-.container-fluid .lower .details .basic .name {
+body .container-fluid .lower .details .basic .name {
   font-size: 1rem;
 }
-
-.container-fluid .lower .details .basic .second {
+body .container-fluid .lower .details .basic .second {
   font-size: 0.75rem;
 }
-
-.container-fluid .lower .details .social-media-account-list {
+body .container-fluid .lower .details .social-media-account-list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,183 +46,212 @@ body {
   width: 100%;
   flex-wrap: nowrap;
 }
-
-.container-fluid .lower .details .social-media-account-list a {
+body .container-fluid .lower .details .social-media-account-list a {
   text-decoration: none;
-  position: relative; /* Needed for absolute positioning of label */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.container-fluid .lower .details .social-media-account-list img {
+body .container-fluid .lower .details .social-media-account-list a:hover span {
+  display: block;
+}
+body .container-fluid .lower .details .social-media-account-list a img {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
 }
-
-.container-fluid .lower .details .social-media-account-list img:hover {
+body .container-fluid .lower .details .social-media-account-list a img:hover {
   transform: scale(1.1);
 }
-
-/* Hover label for social media icons */
-.container-fluid .lower .details .social-media-account-list a span {
+body .container-fluid .lower .details .social-media-account-list a span {
   display: none;
   position: absolute;
-  bottom: -1.8rem; /* Adjust distance from icon */
+  bottom: -1.8rem;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.8);
-  color: white;
+  color: #fff;
   font-size: 0.75rem;
   padding: 4px 6px;
   border-radius: 4px;
   white-space: nowrap;
   z-index: 10;
 }
-
-.container-fluid .lower .details .social-media-account-list a:hover span {
-  display: block; /* Show label on hover */
-}
-
-.container-fluid .lower .details .skills-list {
+body .container-fluid .lower .details .skills-list {
   margin-top: 2rem;
   text-align: center;
 }
-
-.container-fluid .lower .details .skills-list h5 {
+body .container-fluid .lower .details .skills-list h5 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
   text-align: left;
 }
-
-.container-fluid .lower .details .skill-icons {
+body .container-fluid .lower .details .skills-list .skill-icons {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Four icons per row */
+  grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   margin-bottom: 1rem;
 }
-
-.container-fluid .lower .details .skill-item {
+body .container-fluid .lower .details .skills-list .skill-icons .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; /* Needed for label positioning */
+  position: relative;
   width: 3rem;
 }
-
-.container-fluid .lower .details .skill-item img {
+body
+  .container-fluid
+  .lower
+  .details
+  .skills-list
+  .skill-icons
+  .skill-item:hover
+  span {
+  display: block;
+}
+body
+  .container-fluid
+  .lower
+  .details
+  .skills-list
+  .skill-icons
+  .skill-item
+  img {
   width: 2rem;
   height: 2rem;
   object-fit: contain;
   transition: transform 0.3s ease-in-out;
 }
-
-.container-fluid .lower .details .skill-item img:hover {
+body
+  .container-fluid
+  .lower
+  .details
+  .skills-list
+  .skill-icons
+  .skill-item
+  img:hover {
   transform: scale(1.1);
 }
-
-.container-fluid .lower .details .skill-item span {
-  display: none; /* Hide label by default */
+body
+  .container-fluid
+  .lower
+  .details
+  .skills-list
+  .skill-icons
+  .skill-item
+  span {
+  display: none;
   position: absolute;
   bottom: -1.5rem;
   background-color: rgba(0, 0, 0, 0.8);
-  color: white;
+  color: #fff;
   font-size: 0.75rem;
   padding: 2px 6px;
   border-radius: 4px;
   white-space: nowrap;
 }
-
-.container-fluid .lower .details .skill-item:hover span {
-  display: block; /* Show label on hover */
-}
-
-.footer {
-  background-color: #f8f9fa;
-  text-align: center;
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  height: 5vh;
-}
-
-.container-fluid .information-container {
+body .container-fluid .information-container {
   padding-left: 4rem;
   padding-right: 4rem;
 }
-
-.section-content ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.section-content ul li {
-  padding: 5px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.section-content ul li:last-child {
-  border-bottom: none;
-}
-
-.section-content ul.projects {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.section-content ul.projects li {
-  padding: 5px 0;
-}
-
-.section-content hr {
-  border: 0;
-  border-top: 1px solid #ddd;
-  margin: 20px 0;
-}
-
-.project-description {
-  margin-top: 15px;
-  padding: 10px;
-  background-color: #f4f4f4;
+body .container-fluid .information-container .section-content {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #fff;
   border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-.project-description ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.project-description ul li {
-  margin: 5px 0;
-  padding-left: 10px;
-  position: relative;
-}
-
-.project-description ul li:before {
-  content: "•";
-  color: #333;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.project-timeline {
+body
+  .container-fluid
+  .information-container
+  .section-content
+  .section-detail-box
+  .timeline {
   font-size: 0.9rem;
   color: #555;
   margin-top: 5px;
   margin-bottom: 10px;
   font-style: italic;
 }
-
-section {
-  margin-bottom: 30px;
-  padding: 20px;
-  background: white;
+body
+  .container-fluid
+  .information-container
+  .section-content
+  .section-detail-box
+  .project-description {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f4f4f4;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+body
+  .container-fluid
+  .information-container
+  .section-content
+  .section-detail-box
+  .project-description
+  ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body
+  .container-fluid
+  .information-container
+  .section-content
+  .section-detail-box
+  .project-description
+  ul
+  li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+body
+  .container-fluid
+  .information-container
+  .section-content
+  .section-detail-box
+  .project-description
+  ul
+  li:last-child {
+  border-bottom: none;
+}
+body
+  .container-fluid
+  .information-container
+  .section-content
+  .section-detail-box
+  ul.projects {
+  list-style: disc;
+  padding-left: 20px;
+}
+body
+  .container-fluid
+  .information-container
+  .section-content
+  .section-detail-box
+  ul.projects
+  li {
+  padding: 5px 0;
+}
+body
+  .container-fluid
+  .information-container
+  .section-content
+  .section-detail-box
+  hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+body .footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  height: 5vh;
 }

@@ -1,0 +1,220 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  // height: 100%;
+
+  .container-fluid {
+    padding: 0;
+
+    .upper {
+      height: 10vh;
+
+      nav {
+        padding: 1rem;
+      }
+    }
+
+    .lower {
+      display: flex;
+      height: 85vh;
+      padding: 1rem;
+      padding-top: 2rem;
+
+      .profile-picture img {
+        border-radius: 50%;
+        width: 7.5rem;
+        height: 7.5rem;
+        object-fit: cover;
+      }
+
+      .details {
+        margin-top: 0.5rem;
+
+        .basic {
+          display: flexbox;
+          text-align: center;
+
+          .name {
+            font-size: 1rem;
+          }
+
+          .second {
+            font-size: 0.75rem;
+          }
+        }
+
+        .social-media-account-list {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          margin-top: 0.5rem;
+          width: 100%;
+          flex-wrap: nowrap;
+
+          a {
+            text-decoration: none;
+            position: relative; /* Needed for absolute positioning of label */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:hover span {
+              display: block; /* Show label on hover */
+            }
+
+            img {
+              width: 1.5rem;
+              height: 1.5rem;
+              border-radius: 50%;
+              transition: transform 0.3s ease-in-out;
+
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+
+            span {
+              display: none;
+              position: absolute;
+              bottom: -1.8rem; /* Adjust distance from icon */
+              left: 50%;
+              transform: translateX(-50%);
+              background-color: rgba(0, 0, 0, 0.8);
+              color: white;
+              font-size: 0.75rem;
+              padding: 4px 6px;
+              border-radius: 4px;
+              white-space: nowrap;
+              z-index: 10;
+            }
+          }
+        }
+
+        .skills-list {
+          margin-top: 2rem;
+          text-align: center;
+
+          h5 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            text-align: left;
+          }
+
+          .skill-icons {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Four icons per row */
+            justify-items: center;
+            margin-bottom: 1rem;
+
+            .skill-item {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              position: relative; /* Needed for label positioning */
+              width: 3rem;
+
+              &:hover span {
+                display: block; /* Show label on hover */
+              }
+
+              img {
+                width: 2rem;
+                height: 2rem;
+                object-fit: contain;
+                transition: transform 0.3s ease-in-out;
+
+                &:hover {
+                  transform: scale(1.1);
+                }
+              }
+
+              span {
+                display: none; /* Hide label by default */
+                position: absolute;
+                bottom: -1.5rem;
+                background-color: rgba(0, 0, 0, 0.8);
+                color: white;
+                font-size: 0.75rem;
+                padding: 2px 6px;
+                border-radius: 4px;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .information-container {
+      padding-left: 4rem;
+      padding-right: 4rem;
+
+      .section-content {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        .section-detail-box {
+          .timeline {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-style: italic;
+          }
+
+          .project-description {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+            ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+
+              li {
+                padding: 5px 0;
+                border-bottom: 1px solid #ddd;
+
+                &:last-child {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+
+          ul.projects {
+            list-style: disc;
+            padding-left: 20px;
+
+            li {
+              padding: 5px 0;
+            }
+          }
+
+          hr {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    height: 5vh;
+  }
+}

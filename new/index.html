@@ -168,7 +168,7 @@
       </div>
 
       <div class="col-10 information-container">
-        For writers, a random sentence can help them get their creative juices flowing. Since the topic of the sentence is completely unknown, it forces the writer to be creative when the sentence appears. There are a number of different ways a writer can use the random sentence for creativity. The most common way to use the sentence is to begin a story. Another option is to include it somewhere in the story. A much more difficult challenge is to use it to end a story. In any of these cases, it forces the writer to think creatively since they have no idea what sentence will appear from the tool.
+        <button id="backToTop" class="back-to-top">↑ Back to Top</button>
       </div>
     </div>
 
@@ -180,14 +180,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const navLinks = document.querySelectorAll(".nav-link");
         const infoContainer = document.querySelector(".information-container");
-    
-        // Mapping navbar items to corresponding HTML files
-        const pageMapper = {
-          "Janitha Devin Ratnayake": "./sub-pages/home.html",
-          "Experience": "./sub-pages/experience.html",
-          "Projects": "./sub-pages/projects.html",
-          "Publications": "./sub-pages/publications.html"
-        };
+        const backToTopBtn = document.getElementById("backToTop");
     
         // Function to load HTML content
         function loadContent(page) {
@@ -195,6 +188,9 @@
             .then(response => response.text())
             .then(data => {
               infoContainer.innerHTML = data;
+    
+              // Append Back to Top Button after content loads
+              infoContainer.appendChild(backToTopBtn);
             })
             .catch(error => {
               console.error("Error loading page:", error);
@@ -202,11 +198,37 @@
             });
         }
     
+        // Show/Hide Back to Top Button on Scroll
+        infoContainer.addEventListener("scroll", function () {
+          if (infoContainer.scrollTop > 200) {
+            backToTopBtn.classList.add("show");
+          } else {
+            backToTopBtn.classList.remove("show");
+          }
+        });
+    
+        // Scroll to Top when button is clicked
+        backToTopBtn.addEventListener("click", function () {
+          infoContainer.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        });
+    
+        // Load default home content on page load
+        loadContent("./sub-pages/home.html");
+    
         // Attach event listeners to navbar links
         navLinks.forEach(link => {
           link.addEventListener("click", function (event) {
             event.preventDefault();
             const section = this.textContent.trim();
+            const pageMapper = {
+              "Janitha Devin Ratnayake": "./sub-pages/home.html",
+              "Experience": "./sub-pages/experience.html",
+              "Projects": "./sub-pages/projects.html",
+              "Publications": "./sub-pages/publications.html"
+            };
     
             if (pageMapper[section]) {
               loadContent(pageMapper[section]);
@@ -217,11 +239,9 @@
             }
           });
         });
-    
-        // Load default home content on page load
-        loadContent(pageMapper["Janitha Devin Ratnayake"]);
       });
     </script>
+    
     
     
 

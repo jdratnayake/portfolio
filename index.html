@@ -3,582 +3,277 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Janitha Devin Ratnayake</title>
-    <link rel="icon" type="image/png" href="./images/profile-pic-2.png" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-        color: #333;
-        background-color: #f9f9f9;
-      }
 
-      header {
-        background: #f4f4f4;
-        color: #333;
-        padding: 1rem 0;
-        text-align: center;
-        border-bottom: 1px solid #ddd;
-      }
+    <link rel="icon" type="image/png" href="./images/portfolio-icon.png" />
 
-      .work-in-progress {
-        background: #ffefcc;
-        color: #665600;
-        text-align: center;
-        padding: 10px 0;
-        font-weight: bold;
-        border-bottom: 1px solid #ddd;
-      }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-      .profile-picture {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin: 0 auto 10px;
-        display: block;
-        border: 3px solid #ddd;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-      .container {
-        width: 90%;
-        max-width: 800px;
-        margin: 20px auto;
-      }
-
-      .table-of-contents {
-        margin: 20px 0;
-        padding: 15px;
-        background: white;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      .table-of-contents ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      .table-of-contents ul li {
-        margin: 5px 0;
-      }
-
-      /* Styled anchor links */
-      .table-of-contents a {
-        color: blue; /* Set link color to blue */
-        text-decoration: none;
-      }
-
-      .table-of-contents a:hover {
-        text-decoration: underline;
-      }
-
-      section {
-        margin-bottom: 30px;
-        padding: 20px;
-        background: white;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      h1,
-      h2 {
-        color: #444;
-      }
-      /* kk */
-      ul {
-        list-style: none;
-        padding-left: 0;
-      }
-
-      ul.projects {
-        list-style: disc;
-        padding-left: 20px;
-      }
-
-      ul.projects li {
-        padding: 5px 0;
-      }
-
-      hr {
-        border: 0;
-        border-top: 1px solid #ddd;
-        margin: 20px 0;
-      }
-
-      footer {
-        text-align: center;
-        padding: 1rem 0;
-        background: #f4f4f4;
-        color: #333;
-        border-top: 1px solid #ddd;
-      }
-
-      /* Global anchor link styling */
-      a {
-        color: blue; /* Set global link color to blue */
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      #back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #444;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        text-decoration: none;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      }
-
-      #back-to-top:hover {
-        background: #333;
-      }
-
-      #skills {
-        margin-bottom: 30px;
-        padding: 20px;
-        background: white;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      #skills h2 {
-        color: #444;
-      }
-
-      .skills-category {
-        margin-bottom: 15px;
-      }
-
-      .skills-category h3 {
-        font-size: 1.2rem;
-        color: #333;
-        margin-bottom: 5px;
-      }
-
-      .skills-category p {
-        font-size: 1rem;
-        color: #444;
-        margin: 0;
-      }
-
-      .skills-category p span {
-        font-weight: bold;
-      }
-
-      .project-description {
-        margin-top: 15px;
-        padding: 10px;
-        background-color: #f4f4f4;
-        border-radius: 5px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-      }
-
-      .project-description ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .project-description ul li {
-        margin: 5px 0;
-        padding-left: 10px;
-        position: relative;
-      }
-
-      .project-description ul li:before {
-        content: "•";
-        color: #333;
-        font-weight: bold;
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-
-      .project-timeline {
-        font-size: 0.9rem;
-        color: #555;
-        margin-top: 5px;
-        margin-bottom: 10px;
-        font-style: italic;
-      }
-
-      .skills-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-
-      .skill-item {
-        display: flex;
-        align-items: center;
-        gap: 8px; /* Space between image and name */
-      }
-
-      .skill-item img {
-        width: 30px;
-        height: 30px;
-      }
-
-      .skill-item span {
-        font-size: 16px;
-        font-weight: 500;
-      }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <!-- <div class="work-in-progress">This webpage is a work in progress</div> -->
+    <div class="container-fluid">
+      <div class="upper">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
+          <div class="container-fluid">
+            <a class="navbar-brand nav-link" href="#" data-section="home">Janitha Devin Ratnayake</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <header>
-      <img
-        src="./images/profile-pic-2.png"
-        alt="Profile Picture"
-        class="profile-picture"
-      />
-      <h1>Janitha Devin Ratnayake</h1>
-      <p>Software Engineer | Mentor</p>
-    </header>
-
-    <div class="container">
-      <nav class="table-of-contents">
-        <h2>Table of Contents</h2>
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-        </ul>
-      </nav>
-
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          <b>Hello! I'm Janitha Devin Ratnayake</b>. As a software engineer, I
-          am committed to delivering solutions that meet business needs with
-          precision and reliability. By collaborating with cross-functional
-          teams, I ensure that the user’s needs are met effectively. My
-          philosophy of prioritizing quality over quantity drives my focus on
-          creating scalable systems with a low bug rate, offering exceptional
-          value and long-term maintainability.
-        </p>
-      </section>
-
-      <section id="experience">
-        <h2>Experience</h2>
-        <strong>Software Engineer - WealthOS Asia Pacific (Pvt) Ltd.</strong>
-        <p class="project-timeline">May 2024 - Present</p>
-        <div class="project-description">
-          <ul>
-            <li>
-              Gain hands-on experience in wealth management, developing business
-              and technical features to enhance the scalability of SaaS clients.
-            </li>
-            <li>
-              Improve system reliability by efficiently resolving highpriority
-              issues, enhancing overall client satisfaction.
-            </li>
-            <li>
-              Strengthen expertise in coding best practices and test automation
-              to ensure high-quality deliverables.
-            </li>
-            <li>
-              <b>Technologies:</b> Node.js (Express), TypeScript, React,
-              MongoDB, Redis, Docker, Terraform, AWS (Lambda, DynamoDB,
-              DocumentDB, ElastiCache, IAM, S3, API Gateway, CloudWatch,
-              CloudFormation, SAM), SonarCloud, Snyk, Swagger/OpenAPI 3.0,
-              Mongoose, Mocha, Chai, Bitbucket CI/CD
-            </li>
-          </ul>
-        </div>
-
-        <hr />
-
-        <strong>Software Engineer Intern - Xeptagon (Pvt) Ltd.</strong>
-        <p class="project-timeline">Nov 2022 - Apr 2023</p>
-        <div class="project-description">
-          <ul>
-            <li>
-              Designed and implemented an ETL process system to streamline data
-              workflows.
-            </li>
-            <li>
-              <b>Technologies:</b> Python, Azure (Synapse Analytics, Blob
-              Storage), Selenium
-            </li>
-          </ul>
-        </div>
-
-        <hr />
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-
-        <!-- Programming Languages -->
-        <div class="skills-category">
-          <h3>Programming Languages</h3>
-          <div class="skills-list">
-            <div class="skill-item">
-              <img src="./images/typescript.png" alt="TypeScript" />
-              <span>TypeScript</span>
-            </div>
-            |
-            <div class="skill-item">
-              <img src="./images/python.png" alt="Python" />
-              <span>Python</span>
-            </div>
-            |
-            <div class="skill-item">
-              <img src="./images/c.png" alt="C" />
-              <span>C</span>
-            </div>
-            |
-            <div class="skill-item">
-              <img src="./images/c++.png" alt="C" />
-              <span>C++</span>
-            </div>
-            |
-            <div class="skill-item">
-              <img src="./images/java.png" alt="Java" />
-              <span>Java</span>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">
+                  Experience
+                </a>
+                <a class="nav-link" href="#"> Projects </a>
+                <a class="nav-link" href="#"> Publications </a>
+              </div>
             </div>
           </div>
-        </div>
+        </nav>
+      </div>
 
-        <!-- Web Development -->
-        <div class="skills-category">
-          <h3>Web Development</h3>
-          <div class="skills-list">
-            <div class="skill-item">
-              <img src="./images/react.png" alt="React" />
-              <span>React</span>
-            </div>
-            |
-            <div class="skill-item">
-              <img src="./images/nodejs.png" alt="Node.js" />
-              <span>Node.js (Express)</span>
-            </div>
-            |
-            <div class="skill-item">
-              <img src="./images/laravel.png" alt="Laravel" />
-              <span>Laravel</span>
-            </div>
+      <div class="lower">
+        <div class="col-2 text-center">
+          <div class="profile-picture text-center">
+            <img src="./images/profile-pic-2.png" alt="..." />
           </div>
-        </div>
 
-        <!-- Databases -->
-        <div class="skills-category">
-          <h3>Databases</h3>
-          <div class="skills-list">
-            <div class="skill-item">
-              <img src="./images/mongodb.svg" alt="MongoDB" />
-              <span>MongoDB</span>
+          <div class="details">
+            <div class="basic">
+              <div class="name">Janitha Devin Ratnayake</div>
+              <div class="second">Software Engineer at WealthOS</div>
             </div>
-            |
-            <div class="skill-item">
-              <img src="./images/redis.png" alt="Redis" />
-              <span>Redis</span>
-            </div>
-            |
-            <div class="skill-item">
-              <img src="./images/mysql.png" alt="MySQL" />
-              <span>MySQL</span>
-            </div>
-            |
-            <div class="skill-item">
-              <img src="./images/postgresql.png" alt="PostgreSQL" />
-              <span>PostgreSQL</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Other Technologies -->
-        <div class="skills-category">
-          <h3>Other Technologies</h3>
-          <div class="skills-list">
-            <div class="skill-item">
-              <img src="./images/git.png" alt="Git" />
-              <span>Git</span>
+            <div class="social-media-account-list">
+              <a href="mailto:janithadevin@gmail.com" target="_blank">
+                <img src="./images/email.png" alt="Email" />
+                <span>Email</span>
+              </a>
+              <a href="https://github.com/jdratnayake" target="_blank">
+                <img src="./images/github.png" alt="GitHub" />
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/jdratnayake/" target="_blank">
+                <img src="./images/linkedin.png" alt="LinkedIn" />
+                <span>LinkedIn</span>
+              </a>
             </div>
-            |
-            <div class="skill-item">
-              <img src="./images/linux.png" alt="Linux" />
-              <span>Linux</span>
-            </div>
-            |
-            <div class="skill-item">
-              <img src="./images/docker.png" alt="Docker" />
-              <span>Docker</span>
-            </div>
-          </div>
-        </div>
-      </section>
+            
 
-      <section id="projects">
-        <h2>Projects</h2>
-
-        <strong>EMvidence</strong>
-        <p class="project-timeline">Jun 2023 - May 2024</p>
-        <div class="project-description">
-          <ul>
-            <li>
-              EMvidence is a software tool designed to extract forensic insights
-              from electromagnetic (EM) signals emitted by IoT devices.
-            </li>
-            <li>
-              Enables users to capture EM signals from the device being tested
-              using Software-defined Radio (SDR) hardware, specifically the
-              HackRF One.
-            </li>
-            <li>
-              Users can preprocess and analyze the captured EM signals using
-              various modules within EMvidence to gain insights into the tested
-              IoT devices.
-            </li>
-            <li>
-              Allows users to develop third-party modules tailored to their
-              specific needs, fostering open-source development of preprocessing
-              and analysis plugins.
-            </li>
-            <li>
-              Provides an alternative forensic solution for IoT devices found in
-              investigations, as opposed to traditional and invasive digital
-              forensic techniques.
-            </li>
-          </ul>
-          <a href="https://github.com/jdratnayake/EMvidence" target="_blank"
-            >GitHub Repository</a
-          >
+            <div class="skills-list">
+              <h5>Programming Languages</h5>
+              <div class="skill-icons">
+                <div class="skill-item">
+                  <img src="./images/typescript.png" alt="TypeScript" />
+                  <span>TypeScript</span>
+                </div>
+                <div class="skill-item">
+                  <img src="./images/python.png" alt="Python" />
+                  <span>Python</span>
+                </div>
+                <div class="skill-item">
+                  <img src="./images/c.png" alt="C" />
+                  <span>C</span>
+                </div>
+                <div class="skill-item">
+                  <img src="./images/c++.png" alt="C++" />
+                  <span>C++</span>
+                </div>
+                <div class="skill-item">
+                  <img src="./images/java.png" alt="Java" />
+                  <span>Java</span>
+                </div>
+              </div>
+            
+              <h5>Web Development</h5>
+              <div class="skill-icons">
+                <div class="skill-item">
+                  <img src="./images/react.png" alt="React" />
+                  <span>React</span>
+                </div>
+                <div class="skill-item">
+                  <img src="./images/nodejs.png" alt="Node.js" />
+                  <span>Node.js (Express)</span>
+                </div>
+                <div class="skill-item">
+                  <img src="./images/laravel.svg" alt="Laravel" />
+                  <span>Laravel</span>
+                </div>
+              </div>
+            
+              <h5>Databases</h5>
+              <div class="skill-icons">
+                <div class="skill-item">
+                  <img src="./images/mongodb.svg" alt="MongoDB" />
+                  <span>MongoDB</span>
+                </div>
+                <div class="skill-item">
+                  <img src="./images/redis.svg" alt="Redis" />
+                  <span>Redis</span>
+                </div>
+                <div class="skill-item">
+                  <img src="./images/mysql.svg" alt="MySQL" />
+                  <span>MySQL</span>
+                </div>
+                <div class="skill-item">
+                  <img src="./images/postgresql.svg" alt="PostgreSQL" />
+                  <span>PostgreSQL</span>
+                </div>
+              </div>
+            
+              <h5>Other Technologies</h5>
+              <div class="skill-icons">
+                <div class="skill-item">
+                  <img src="./images/git.svg" alt="Git" />
+                  <span>Git</span>
+                </div>
+                <div class="skill-item">
+                  <img src="./images/linux.svg" alt="Linux" />
+                  <span>Linux</span>
+                </div>
+                <div class="skill-item">
+                  <img src="./images/docker.svg" alt="Docker" />
+                  <span>Docker</span>
+                </div>
+              </div>
+            </div>            
         </div>
-        <ul class="projects">
-          Contributors:
-          <a href="https://www.linkedin.com/in/senal-punsara-6740941a5/"
-            >Senal Punsara</a
-          >,<a href="https://www.linkedin.com/in/dinil-ratnayake/">
-            Dinil Ratnayake</a
-          >,<a href="https://www.linkedin.com/in/asanka-p-sayakkara-06300814/">
-            Asanka Sayakkara</a
-          >,
-          <a href="https://www.linkedin.com/in/akila-wickramasekara-a976a918/"
-            >Akila Wickramasekara</a
-          >
-        </ul>
-        <hr />
+      </div>
 
-        <strong>ARTTIC</strong>
-        <p class="project-timeline">Apr 2022 - Oct 2022</p>
-        <div class="project-description">
-          <ul>
-            <li>
-              ARTTIC is a community platform empowering Non-Fungible Token (NFT)
-              creators to globally market their work by connecting them with a
-              network of NFT followers.
-            </li>
-            <li>
-              The platform provides information on newly minted NFTs, their
-              background stories, upcoming NFTs, and previous works of the
-              creator.
-            </li>
-            <li>
-              Creators can publish all the latest information on their profiles
-              and receive feedback from followers.
-            </li>
-            <li>
-              This platform is designed for existing NFT creators and followers,
-              as well as anyone interested in joining the industry in the
-              future.
-            </li>
-          </ul>
-          <a href="https://github.com/jdratnayake/arttic" target="_blank"
-            >GitHub Repository</a
-          >
-        </div>
-        <ul class="projects">
-          Contributors:
-          <a href="https://www.linkedin.com/in/charith-anjana/"
-            >Charith Anjana</a
-          >,
-          <a href="https://www.linkedin.com/in/mahesh-lakshan/">
-            Mahesh Lakshan </a
-          >,
-          <a href="https://www.linkedin.com/in/maleesha-gunarathna/">
-            Maleesha Gunarathna </a
-          >,
-          <a
-            href="https://www.linkedin.com/in/lavinka-gayeshi-weerasekara-0240b6170/"
-          >
-            Lavinka Weerasekara </a
-          >,
-          <a href="https://www.linkedin.com/in/thilina-halloluwa/">
-            Thilina Halloluwa
-          </a>
-        </ul>
-        <hr />
-
-        <strong>ALec</strong>
-        <p class="project-timeline">Mar 2021 - Mar 2022</p>
-        <div class="project-description">
-          <ul>
-            <li>
-              ALec is a mobile and web application that addresses the challenges
-              of low student engagement and interaction in the classroom.
-            </li>
-            <li>
-              It allows lecturers to give small quizzes during lectures, which
-              students can answer via their smartphones, giving the lecturer a
-              real-time understanding of students' knowledge and understanding
-              of the lecture.
-            </li>
-            <li>
-              Students can also ask questions anonymously through the app,
-              increasing participation and interaction in class.
-            </li>
-            <li>
-              The app provides a platform for self-evaluation through a
-              leaderboard and review system, helping students to pay closer
-              attention to course content.
-            </li>
-            <li>
-              ALec strengthens the interaction between lecturers and students,
-              increasing efficiency and popularity for both parties, and
-              ultimately improving the overall learning experience.
-            </li>
-          </ul>
-          <a href="https://github.com/jdratnayake/ALec" target="_blank"
-            >GitHub Repository</a
-          >
-        </div>
-        <ul class="projects">
-          Contributors:
-          <a href="https://www.linkedin.com/in/charith-anjana/"
-            >Charith Anjana</a
-          >,
-          <a href="https://www.linkedin.com/in/pansilu-gunaratna/">
-            Pansilu Gunaratna </a
-          >,
-          <a href="https://www.linkedin.com/in/sumudu-wathsala-511813253/">
-            Sumudu Wathsala </a
-          >,
-          <a href="https://www.linkedin.com/in/dinunifernando/">
-            Dinuni Fernando
-          </a>
-        </ul>
-        <hr />
-      </section>
+      <div class="col-10 information-container">
+        <button id="backToTop" class="back-to-top">↑ Back to Top</button>
+      </div>
     </div>
 
-    <a href="#" id="back-to-top">&#8593; Back to Top</a>
-
-    <footer>
-      <p>&copy; 2025 Janitha Devin Ratnayake. All Rights Reserved.</p>
+    <footer class="footer">
+      <div>&copy; 2025 Janitha Devin Ratnayake. All rights reserved.</div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+        const infoContainer = document.querySelector(".information-container");
+        const backToTopBtn = document.getElementById("backToTop");
+    
+        // Function to load HTML content
+        function loadContent(page) {
+          fetch(page)
+            .then(response => response.text())
+            .then(data => {
+              infoContainer.innerHTML = data;
+    
+              // Append Back to Top Button after content loads
+              infoContainer.appendChild(backToTopBtn);
+            })
+            .catch(error => {
+              console.error("Error loading page:", error);
+              infoContainer.innerHTML = "<p>Error loading content.</p>";
+            });
+        }
+    
+        // Show/Hide Back to Top Button on Scroll
+        infoContainer.addEventListener("scroll", function () {
+          if (infoContainer.scrollTop > 200) {
+            backToTopBtn.classList.add("show");
+          } else {
+            backToTopBtn.classList.remove("show");
+          }
+        });
+    
+        // Scroll to Top when button is clicked
+        backToTopBtn.addEventListener("click", function () {
+          infoContainer.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        });
+    
+        // Load default home content on page load
+        loadContent("./sub-pages/home.html");
+    
+        // Attach event listeners to navbar links
+        navLinks.forEach(link => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const section = this.textContent.trim();
+            const pageMapper = {
+              "Janitha Devin Ratnayake": "./sub-pages/home.html",
+              "Experience": "./sub-pages/experience.html",
+              "Projects": "./sub-pages/projects.html",
+              "Publications": "./sub-pages/publications.html"
+            };
+    
+            if (pageMapper[section]) {
+              loadContent(pageMapper[section]);
+    
+              // Remove 'active' class from all links and add it to the clicked one
+              navLinks.forEach(link => link.classList.remove("active"));
+              this.classList.add("active");
+            }
+          });
+        });
+      });
+
+      const isUnderDevelopment = false; // Toggle this to enable/disable the banner
+
+      if (isUnderDevelopment) {
+        const banner = document.createElement("div");
+        banner.textContent = "🚧 This website is currently under development. Some information may be outdated or incorrect, and some features may not work properly. 🚀";
+        banner.style.backgroundColor = "#ffcc00";
+        banner.style.color = "#333";
+        banner.style.textAlign = "center";
+        banner.style.fontWeight = "bold";
+        banner.style.fontSize = "14px";
+        banner.style.padding = "10px";
+        banner.style.position = "fixed";
+        banner.style.width = "100%";
+        banner.style.top = "0";
+        banner.style.left = "0";
+        banner.style.zIndex = "1000";
+        
+        document.body.prepend(banner);
+
+
+        // Add margin to body to prevent content overlap
+        document.body.style.marginTop = "40px"; // Adjust height based on banner size
+      }
+    </script>
+    
+    
+    
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

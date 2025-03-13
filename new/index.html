@@ -33,7 +33,7 @@
       <div class="upper">
         <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Janitha Devin Ratnayake</a>
+            <a class="navbar-brand nav-link" href="#" data-section="home">Janitha Devin Ratnayake</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -165,14 +165,65 @@
               </div>
             </div>            
         </div>
+      </div>
 
-        <div class="col-10 text-center"></div>
+      <div class="col-10 information-container">
+        For writers, a random sentence can help them get their creative juices flowing. Since the topic of the sentence is completely unknown, it forces the writer to be creative when the sentence appears. There are a number of different ways a writer can use the random sentence for creativity. The most common way to use the sentence is to begin a story. Another option is to include it somewhere in the story. A much more difficult challenge is to use it to end a story. In any of these cases, it forces the writer to think creatively since they have no idea what sentence will appear from the tool.
       </div>
     </div>
 
     <footer class="footer">
       <p>&copy; 2025 Janitha Devin Ratnayake. All rights reserved.</p>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+        const infoContainer = document.querySelector(".information-container");
+    
+        // Mapping navbar items to corresponding HTML files
+        const pageMapper = {
+          "Janitha Devin Ratnayake": "./sub-pages/home.html",
+          "Experience": "./sub-pages/experience.html",
+          "Projects": "./sub-pages/projects.html",
+          "Publications": "./sub-pages/publications.html"
+        };
+    
+        // Function to load HTML content
+        function loadContent(page) {
+          fetch(page)
+            .then(response => response.text())
+            .then(data => {
+              infoContainer.innerHTML = data;
+            })
+            .catch(error => {
+              console.error("Error loading page:", error);
+              infoContainer.innerHTML = "<p>Error loading content.</p>";
+            });
+        }
+    
+        // Attach event listeners to navbar links
+        navLinks.forEach(link => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const section = this.textContent.trim();
+    
+            if (pageMapper[section]) {
+              loadContent(pageMapper[section]);
+    
+              // Remove 'active' class from all links and add it to the clicked one
+              navLinks.forEach(link => link.classList.remove("active"));
+              this.classList.add("active");
+            }
+          });
+        });
+    
+        // Load default home content on page load
+        loadContent(pageMapper["Janitha Devin Ratnayake"]);
+      });
+    </script>
+    
+    
 
     <!-- Bootstrap Bundle with Popper -->
     <script

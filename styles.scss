@@ -1,6 +1,7 @@
 $background-color: #fafafa;
 $btn-color: #0366d6;
 $color-1: #28a745;
+$color-2: #f9f9f9;
 
 body {
   font-family: "Poppins", sans-serif;
@@ -206,7 +207,7 @@ body {
 
           .project-description {
             padding: 1rem;
-            background-color: #f4f4f4;
+            background-color: $color-2;
             border-radius: 5px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 

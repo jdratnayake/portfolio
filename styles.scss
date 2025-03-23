@@ -1,22 +1,54 @@
+$background-color: #fafafa;
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: $background-color;
 
   .container-fluid {
     padding: 0;
 
     .upper {
-      height: 10vh;
+      height: 8vh;
 
       nav {
         padding: 1rem;
+        width: 100%;
+        background-color: $background-color !important;
+
+        .container-fluid {
+          .name-btn {
+            a {
+              font-weight: 600;
+              font-size: 1.25rem;
+            }
+          }
+
+          .navbar-item-btn {
+            display: flex;
+            justify-content: flex-end;
+
+            .navbar-nav {
+              gap: 1.5rem;
+
+              .nav-link {
+                font-weight: 500;
+                font-size: 1rem;
+
+                &.active {
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
       }
     }
 
     .lower {
       display: flex;
-      height: 82vh;
+      height: 84vh;
       padding: 1rem;
       padding-top: 2rem;
 
@@ -355,7 +387,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8f9fa;
+    background-color: $background-color;
     font-size: 0.875rem;
     height: 8vh;
   }

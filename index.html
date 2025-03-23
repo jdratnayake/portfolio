@@ -33,7 +33,19 @@
       <div class="upper">
         <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
           <div class="container-fluid">
-            <a class="navbar-brand nav-link" href="#" data-section="home">Janitha Devin Ratnayake</a>
+            <div class="name-btn">
+              <a class="navbar-brand nav-link" href="#" data-section="home">Janitha Devin Ratnayake</a>
+            </div>  
+
+            <div class="collapse navbar-collapse navbar-item-btn" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">About</a>
+                <a class="nav-link" aria-current="page" href="#">Experience</a>
+                <a class="nav-link" href="#"> Projects </a>
+                <a class="nav-link" href="#"> Publications </a>
+              </div>
+            </div>
+
             <button
               class="navbar-toggler"
               type="button"
@@ -45,16 +57,6 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Experience
-                </a>
-                <a class="nav-link" href="#"> Projects </a>
-                <a class="nav-link" href="#"> Publications </a>
-              </div>
-            </div>
           </div>
         </nav>
       </div>
@@ -221,24 +223,45 @@
         // Attach event listeners to navbar links
         navLinks.forEach(link => {
           link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const section = this.textContent.trim();
-            const pageMapper = {
-              "Janitha Devin Ratnayake": "./sub-pages/home.html",
-              "Experience": "./sub-pages/experience.html",
-              "Projects": "./sub-pages/projects.html",
-              "Publications": "./sub-pages/publications.html"
-            };
-    
-            if (pageMapper[section]) {
-              loadContent(pageMapper[section]);
-    
-              // Remove 'active' class from all links and add it to the clicked one
-              navLinks.forEach(link => link.classList.remove("active"));
-              this.classList.add("active");
+          event.preventDefault();
+          
+          const clickedLink = event.target.closest("a"); // Ensure we always get the <a> element
+          if (!clickedLink) return; // If somehow not an <a>, exit
+          
+          let section = clickedLink.innerText.trim();
+
+          const pageMapper = {
+            "Janitha Devin Ratnayake": "./sub-pages/home.html",
+            "About": "./sub-pages/home.html",
+            "Experience": "./sub-pages/experience.html",
+            "Projects": "./sub-pages/projects.html",
+            "Publications": "./sub-pages/publications.html"
+          };
+
+          // If "Janitha Devin Ratnayake" is clicked, also set the section as "About"
+          if (section === "Janitha Devin Ratnayake") {
+            section = "About"; // Treat it as clicking "About"
+          }
+
+          if (pageMapper[section]) {
+            loadContent(pageMapper[section]);
+
+            // Remove 'active' class from all links and add it to the clicked one
+            navLinks.forEach(link => link.classList.remove("active"));
+
+            // Find the "About" link and set it as active when clicking "Janitha Devin Ratnayake"
+            if (section === "About") {
+              const aboutLink = [...navLinks].find(link => link.innerText.trim() === "About");
+              if (aboutLink) {
+                aboutLink.classList.add("active");
+              }
+            } else {
+              clickedLink.classList.add("active");
             }
-          });
+          }
         });
+});
+
       });
 
       const isUnderDevelopment = false; // Toggle this to enable/disable the banner
